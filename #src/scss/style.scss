@@ -1,3 +1,20 @@
 @import './config/variables';
 @import './base/base';
 @import './layout/layout';
+
+@import './components/buttons';
+
+@import './components/header';
+@import './components/home';
+@import './components/about';
+@import './components/discover';
+@import './components/experience';
+@import './components/video';
+@import './components/places';
+@import './components/subscribe';
+@import './components/sponsors';
+@import './components/footer';
+
+@import './components/scroll';
+@import './theme/theme';
+@import './media/media';

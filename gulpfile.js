@@ -11,6 +11,7 @@ let path = {
         img: projectFolder + "/img/",
         fonts: projectFolder + "/fonts/",
         icons: projectFolder + "/icons/",
+        video: projectFolder + "/video/",
     },
     src : {
         html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
@@ -22,6 +23,7 @@ let path = {
         scrollreveal: sourceFolder + "/js/scrollreveal.min.js",
         swiperbundlejs: sourceFolder + "/js/swiper-bundle.min.js",
         swiperbundlecss: sourceFolder + "/css/swiper-bundle.min.css",
+        video: sourceFolder + "/video/video.mp4",
     },
     watch : {
         html: sourceFolder + "/**/*.html",
@@ -131,6 +133,11 @@ function swiperBundleCss() {
         .pipe(dest(path.build.css));
 }
 
+function videoSource() {
+    return src(path.src.video)
+        .pipe(dest(path.build.video));
+}
+
 function images() {
     return src(path.src.img)
         .pipe(
@@ -230,9 +237,10 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, icons, scrollReveal, swiperBundleJs, swiperBundleCss));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, icons, scrollReveal, swiperBundleJs, swiperBundleCss, videoSource));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.video = videoSource;
 exports.swiperbundlecss = swiperBundleCss;
 exports.swiperbundlejs = swiperBundleJs;
 exports.scrollreveal = scrollReveal;

@@ -1,0 +1,58 @@
+// Footer
+.footer {
+    &__container {
+        row-gap: 5rem;
+    }
+    &__content {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 2rem;
+    }
+    &__title, &__subtitle {
+        font-size: var(--h3-font-size);
+    }
+    &__title {
+        margin-bottom: var(--mb-0-5);
+    }
+    &__description {
+        margin-bottom: var(--mb-2);
+    }
+    &__social {
+        font-size: 1.25rem;
+        color: var(--title-color);
+        margin-bottom: var(--mb-1-25);
+    }
+    &__subtitle {
+        margin-bottom: var(--mb-1);
+    }
+    &__item {
+        margin-bottom: var(--mb-0-75);
+    }
+    &__link {
+        color: var(--text-color);
+
+        &:hover {
+            color: var(--title-color);
+        }
+    }
+    &__rights {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+    &__copy, &__terms-link {
+        font-size: var(--small-font-size);
+        color: var(--text-color-light);
+    }
+    &__terms {
+        display: flex;
+        column-gap: 1.5rem;
+        justify-content: center;
+
+        &-link {
+            &:hover {
+                color: var(--text-color);
+            }
+        }
+    }
+}

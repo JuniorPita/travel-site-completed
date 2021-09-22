@@ -1,0 +1,30 @@
+// Subscribe
+.subscribe {
+    &__bg {
+        background-color: var(--first-color-second);
+        padding: 2.5rem 0;
+    }
+    &__title, &__description {
+        color: var(--white-color);
+    }
+    &__description {
+        text-align: center;
+        margin-bottom: var(--mb-2-5);
+    }
+    &__form {
+        background-color: var(--input-color);
+        padding: .5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        width: 70%;
+        padding-right: .5rem;
+        background-color: var(--input-color);
+        color: var(--text-color);
+
+        &::placeholder {
+            color: var(--text-color);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+// Experience
+.experience {
+    &__container {
+        row-gap: 2.5rem;
+        justify-content: center;
+        justify-items: center;
+    }
+    &__content {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        justify-self: center;
+        padding: 0 2rem;
+    }
+    &__number {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-semi-bold);
+        margin-bottom: var(--mb-0-5);
+    }
+    &__description {
+        font-size: var(--small-font-size);
+    }
+    &__img {
+        position: relative;
+        padding-bottom: 2rem;
+
+        &-one, &-two {
+            transition: var(--img-transition);
+
+            &:hover {
+                transform: var(--img-scale);
+            }
+        }
+    }
+    &__overlay {
+        overflow: var(--img-hidden);
+
+        &:nth-child(1) {
+            width: 263px;
+            margin-right: 2rem;
+        }
+        &:nth-child(2) {
+            width: 120px;
+            position: absolute;
+            top: 2rem;
+            right: 0;
+        }
+    }
+}

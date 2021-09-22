@@ -1,0 +1,313 @@
+// Media Queries
+
+// For small devices
+@media screen and (max-width: 340px) {
+    .place {
+        &__container {
+            grid-template-columns: max-content;
+            justify-content: center;
+        }
+    }
+    
+    .experience {
+        &__content {
+            padding: 0;
+        }
+        &__overlay:nth-child(1) {
+            width: 190px;
+        }
+        &__overlay:nth-child(2) {
+            width: 80px;
+        }
+    }
+
+    .home {
+        &__info {
+            width: 190px;
+            padding: 1rem;
+        }
+    }
+
+    .experience__img,
+    .video__container {
+        padding: 0;
+    }
+}
+
+// For medium devices
+@media screen and (min-width: 568px) {
+    .video {
+        &__container {
+            display: grid;
+            grid-template-columns: .6fr;
+            justify-content: center;
+        }
+    }
+    
+    .place {
+        &__container {
+            grid-template-columns: repeat(3, max-content);
+        }
+    }
+
+    .subscribe {
+        &__form {
+            width: 470px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+
+        &__link {
+            color: var(--white-color);
+            text-transform: initial;
+
+            &:hover {
+                color: var(--white-color);
+            }
+        }
+        &__dark {
+            position: initial;
+        }
+        &__menu {
+            display: flex;
+            column-gap: 1rem;
+        }
+        &__list {
+            flex-direction: row;
+            column-gap: 4rem;
+        }
+        &__toggle,
+        &__close,
+        .change-theme-name {
+            display: none;
+        }
+        .change-theme {
+            color: var(--white-color);
+        }
+    }
+
+    .active-link {
+        &::before {
+            content: '';
+            background-color: var(--white-color);
+        }
+    }
+
+    .scroll-header .nav__link {
+        color: var(--text-color);
+    }
+
+    .scroll-header .active-link {
+        color: var(--title-color);
+    }
+
+    .scroll-header .active-link::before {
+        background-color: var(--title-color);
+    }
+
+    .scroll-header .change-theme {
+        color: var(--text-color);
+    }
+
+    .section {
+        padding: 7rem 0 2rem 0;
+    }
+
+    .home {
+        &__container {
+            height: 100vh;
+            grid-template-rows: 1.8fr .5fr;
+        }
+        &__data {
+            align-self: flex-end;
+        }
+        &__social {
+            flex-direction: row;
+            align-self: flex-end;
+            margin-bottom: 3rem;
+            column-gap: 2.5rem;
+        }
+        &__info {
+            bottom: 3rem;
+        }
+    }
+
+    .about {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+        &__data, &__title {
+            text-align: initial;
+        }
+        &__title {
+            margin-bottom: var(--mb-1-5);
+        }
+        &__description {
+            margin-bottom: var(--mb-2);
+        }
+    }
+
+    .discover {
+        &__container {
+            width: 610px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .discover__container,
+    .place__container {
+        padding-top: 2rem;
+    }
+
+    .experience__overlay:nth-child(1) {
+        width: 363px;
+        margin-right: 4rem;
+    }
+
+    .experience__overlay:nth-child(2) {
+        width: 160px;
+    }
+
+    .subscribe {
+        &__bg {
+            background: none;
+            padding: 0;
+        }
+        &__container {
+            background-color: var(--first-color-second);
+            padding: 3.5rem 0;
+        }
+        &__input {
+            padding: 0 .5rem;
+        }
+    }
+
+    .footer {
+        &__rights {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+// For large devices
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home {
+        &__container {
+            grid-template-rows: 2fr .5fr;
+        }
+        &__info {
+            width: 328px;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 2rem;
+
+            &-title {
+                font-size: var(--normal-font-size);
+            }
+            &-img {
+                width: 240px;
+            }
+        }
+    }
+
+    .about {
+        &__img {
+            &-one {
+                width: 240px;
+            }
+            &-two {
+                width: 290px;
+            }
+        }
+    }
+
+    .discover {
+        &__card {
+            width: 237px;
+        }
+        &__container {
+            width: 700px;
+        }
+        &__data {
+            left: 1.5rem;
+            bottom: 2rem;
+        }
+        &__title {
+            font-size: var(--h2-font-size);
+        }
+    }
+
+    .experience {
+        &__content {
+            margin: var(--mb-1) 0;
+            column-gap: 3.5rem;
+        }
+        &__overlay:nth-child(1) {
+            width: 463px;
+            margin-right: 7rem;
+        }
+        &__overlay:nth-child(2) {
+            width: 220px;
+            top: 3rem;
+        }
+    }
+
+    .video {
+        &__container {
+            grid-template-columns: .7fr;
+        }
+        &__description {
+            padding: 0 8rem;
+        }
+    }
+
+    .place {
+        &__container {
+            gap: 3rem 2rem;
+        }
+        &__card, &__img {
+            height: 263px;
+        }
+    }
+
+    .footer {
+        &__content {
+            justify-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+// For tall screens on mobiles and desktop
+@media screen and (min-height: 721px) {
+    body {
+        margin: 0;
+    }
+
+    .home {
+        &__container, &__img {
+            height: 640px;
+        }
+    }
+}

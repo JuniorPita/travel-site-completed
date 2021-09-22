@@ -1,9 +1,9 @@
-/*=============== VARIABLES CSS ===============*/
-:root{
+// Variables
+:root {
     --header-height: 3rem;
 
-    /*========== Colors ==========*/
-    --hue-color: 190; // Green dark
+    // Colors
+    --hue-color: 190; // Green Dark
 
     --first-color: hsl(var(--hue-color), 64%, 22%);
     --first-color-second: hsl(var(--hue-color), 64%, 22%);
@@ -16,12 +16,10 @@
     --white-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
-    
 
-    /*========== Font and typography ==========*/
+    // Font and typography
     --body-font: 'Open Sans', sans-serif;
     --title-font: 'Raleway', sans-serif;
-
     --biggest-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -30,12 +28,11 @@
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
 
-    /*========== Font weight ==========*/
+    // Font weight
     --font-medium: 500;
     --font-semi-bold: 600;
-    --font-bold: 700;
 
-    /*========== Margenes ==========*/
+    // Margenes bottom
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
@@ -45,11 +42,11 @@
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
 
-    /*========== Z-index ==========*/
+    // Z-index
     --z-tooltip: 10;
     --z-fixed: 100;
 
-    /*========== Hover overlay ==========*/
+    // Hover overlay
     --img-transition: .3s;
     --img-hidden: hidden;
     --img-scale: scale(1.1);

@@ -1,0 +1,26 @@
+// Buttons
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    font-weight: var(--font-semi-bold);
+    transition: .3s;
+
+    &:hover {
+        background-color: var(--first-color-alt);
+    }
+    &-flex {
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+    }
+    &-link {
+        background: none;
+        padding: 0;
+
+        &:hover {
+            background: none;
+        }
+    }
+}

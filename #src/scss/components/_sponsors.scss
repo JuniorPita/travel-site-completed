@@ -1,0 +1,29 @@
+// Sponsors
+.sponsor {
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        justify-items: center;
+        row-gap: 3.5rem;
+    }
+    &__img {
+        width: 90px;
+        filter: invert(.7);
+        transition: var(--img-transition);
+    }
+    &__content {
+        &:hover {
+            .sponsor__img {
+                filter: invert(.5);
+            }
+        }
+    }
+    &__title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb-2-5);
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+    }
+}
