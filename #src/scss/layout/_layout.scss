@@ -1,31 +1,23 @@
 // Reusable CSS classes
 .section {
-    padding: 4rem 0 2rem 0;
+    padding: 4.5rem 0 2.5rem 0;
     &__title {
-        font-size: var(--bigger-font-size);
+        font-size: var(--h2-font-size);
         text-align: center;
-        margin-bottom: var(--mb-2-5);
-        
-        &-gradient {
-            background: var(--text-gradient);
-            color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
+        color: var(--title-color);
+        text-transform: capitalize;
+        margin-bottom: var(--mb-2);
     }
 }
 
 // Layout
-.main {
-    overflow: hidden;
-}
-
 .container {
     max-width: 968px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
 }
 
 .grid {
     display: grid;
+    gap: 1.5rem;
 }
